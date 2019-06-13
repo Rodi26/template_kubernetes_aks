@@ -20,7 +20,7 @@
     }
   },
   "metadata": {
-      "displayName": "Azure Kubernetes Service",
+      "displayName": "Azure Kubernetes Service Rod",
       "providerDisplayName": "Azure Kubernetes Service",
       "longDescription": "Kubernetes cluster to be deployed in Microsoft Azure",
       "bullets": [
