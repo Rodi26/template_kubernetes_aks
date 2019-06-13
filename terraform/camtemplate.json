@@ -1,7 +1,7 @@
 {
   "name": "Microsoft Azure Kubernetes Service",
   "description": "Managed Kubernetes Service within Microsoft Azure",
-  "version": "1.0",
+  "version": "2.8.0",
   "type": "prebuilt",
   "manifest": {
     "template_type": "Terraform",
