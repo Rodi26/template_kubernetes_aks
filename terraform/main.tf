@@ -1,18 +1,3 @@
-# Use regular expression to validate format of given kubernetes version
-resource "null_resource" "validate-kube-version" {
-  provisioner "local-exec" {
-    interpreter = ["/bin/bash", "-c"]
-    command = <<EOT
-regex="^latest|(([0-9]+\\.?){0,2}([0-9]+))$"
-if [[ ! ${lower(var.kube_version)} =~ $$regex ]]; then
-    echo "Invalid kubernetes version"
-    exit 1
-fi
-EOT
-  }
-}
-
-
 resource "azurerm_resource_group" "cluster_resource_group" {
   depends_on = ["null_resource.validate-kube-version"]
   name     = "${var.resource_group_name}"
