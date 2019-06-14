@@ -9,7 +9,7 @@
     "template_provider": "Microsoft Azure",
     "template": {
       "templateData": "",
-      "version": "1.28.0"
+      "version": "1.28.0",
       "templateVariables": "",
       "templateOutput": ""
     },
