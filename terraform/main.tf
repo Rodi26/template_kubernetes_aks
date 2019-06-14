@@ -25,14 +25,6 @@ data "azurerm_kubernetes_service_versions" "current" {
   version_prefix = "${lower(var.kube_version) != "latest" ? var.kube_version : ""}"
 }
 
-locals {
-  # Supported versions ordered earliest to latest
-  supported_versions = "${data.azurerm_kubernetes_service_versions.current.versions}"
-  version_count      = "${length(local.supported_versions)}"
-  requested_version  = "${local.version_count > 0 ?
-                          local.supported_versions[local.version_count - 1] :
-                          data.azurerm_kubernetes_service_versions.current.latest_version}"
-}
 
 resource "azurerm_kubernetes_cluster" "aks_cluster" {
   name                = "${var.cluster_name}"
