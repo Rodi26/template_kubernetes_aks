@@ -1,5 +1,4 @@
 resource "azurerm_resource_group" "cluster_resource_group" {
-  depends_on = ["null_resource.validate-kube-version"]
   name     = "${var.resource_group_name}"
   location = "${var.azure_region}"
 }
