@@ -120,7 +120,7 @@
        "name": "kube_version",
        "type": "string",
        "description": "Kubernetes version for the cluster; 'latest' for the latest supported version, or version number in X.Y[.Z] format",
-       "default": "latest",
+       "default": "1.12.5",
        "hidden": false,
        "label": "Kubernetes version",
        "secured": false,
